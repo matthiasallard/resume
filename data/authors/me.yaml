@@ -1,133 +1,278 @@
-schema: hugoblox/author/v1
-slug: me
+schema: "hugoblox/author/v1"
+slug: "me"
 is_owner: true
 name:
-  display: 吳健雄
-  given: Shiung Wu
-  family: Chien
-  pronunciation: Chien Shiung Wu
-  pronouns: she/her
-status:
-  icon: "☕️"
-role: Director of Cloud Infrastructure
-bio: >
-  I am currently Director of Cloud Infrastructure at GenCoin where I am leading
-  teams on edge computing, deep sea data center architecture, and hivemind
-  optimization.
-affiliations:
-  - name: GenCoin
-    url: https://www.example.com/
+  display: "Matthias Allard"
+  given: "Matthias"
+  family: "Allard"
+  pronunciation: ""
+  pronouns: ""
+role: "Researcher in Random Matrix Theory"
+bio: "Mathematical Physicist, engineer with a PhD specialising in Random Matrix Theory. My research focuses on universal phenomena in random matrix ensembles, including eigenvalue and singular value correlations, hard-edge asymptotics, and Coulomb gas."
+affiliations: []
 links:
-  - icon: at-symbol
-    url: mailto:your-email@example.com
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/GoOwnable
-  - icon: brands/github
-    url: https://github.com/gcushen
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/
-  - icon: brands/instagram
-    url: https://www.instagram.com/
+  - icon: "at-symbol"
+    url: "mailto:m.allard@unimelb.edu.au"
+    label: "E-mail Me"
+  - icon: "academicons/orcid"
+    url: "https://orcid.org/0000-0002-5682-424X"
+    label: "ORCID"
+  - icon: "academicons/google-scholar"
+    url: "https://scholar.google.com/citations?user=BJgi_e0AAAAJ&hl=fr&inst=4522501446918153378"
+    label: "Google Scholar"
 education:
-  - degree: PhD Artificial Intelligence
-    institution: Stanford University
-    start: 2016-01-01
-    end: 2020-12-31
-    summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+  - degree: "Joint PhD in Random Matrices and Complex Analysis"
+    institution: "University of Melbourne & KU Leuven"
+    start: "2021"
+    end: "2025"
+    summary: "Joint PhD under the supervision of Mario Kieburg (University of Melbourne) and Arno Kuijlaars (KU Leuven).
+
+
+      Research topics included:
+
+
+      - Random Matrix Theory
+
+      - Probability
+
+      - Harmonic Analysis
+
+      - Orthogonal Polynomials
+
+      - Measure Theory
+
+      - Coulomb Gases"
     button:
       text: "Read Thesis"
-      url: "https://example.com"
-  - degree: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    start: 2016-01-01
-    end: 2020-12-31
-    summary: |
-      GPA: 3.8/4.0
+      url: "uploads/phd-manuscript.pdf"
+  - degree: "MSc Physics (Double Diploma), with Distinction"
+    institution: "Imperial College London"
+    start: "2019"
+    end: "2020"
+    summary: "Courses included:
+
+
+      - Quantum Information
+
+      - Quantum Field Theory
+
+      - Unification
+
+      - General Relativity
+
+      - Mathematical Methods for Physicists
+
+      - Plasmonics and Metamaterials
+
+      - Group Theory"
+  - degree: "Diplôme d'Ingénieur Photonics & MSc Fundamental Physics"
+    institution: "Institut d'Optique Graduate School & Université Paris-Saclay"
+    start: "2018"
+    end: "2019"
+    summary: "Concurrent engineering and physics degrees.
+
 
       Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - degree: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    start: 2016-01-01
-    end: 2020-12-31
-    summary: |
-      GPA: 3.4/4.0
+
+
+      - Fourier Optics
+
+      - Nonlinear Optics
+
+      - Radiometry
+
+      - Optical System Design
+
+      - Light-Matter Interaction
+
+      - Atomic Physics
+
+      - Plasma Physics
+
+      - Particle Physics"
+  - degree: "Diplôme d'Ingénieur Photonics & BSc Fundamental Physics"
+    institution: "Institut d'Optique Graduate School & Université Paris-Saclay"
+    start: "2017"
+    end: "2018"
+    summary: "Concurrent engineering and physics degrees.
+
 
       Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+
+      - Signal Processing
+
+      - Polarization
+
+      - Laser Physics
+
+      - Scientific Computing
+
+      - Optical Physics
+
+      - Quantum Physics
+
+      - Statistical Physics
+
+      - Special Relativity
+
+      - Analytical Mechanics
+
+      - Electromagnetism"
+  - degree: "Classe Préparatoire aux Grandes Écoles"
+    institution: "Lycée Chaptal"
+    start: "2015"
+    end: "2017"
+    summary: "Two-year intensive undergraduate preparation in:
+
+
+      - Mathematics (14h/week)
+
+      - Physics (12h/week)
+
+      - Engineering (12h/week)"
 experience:
-  - role: Director of Cloud Infrastructure
-    org: GenCoin
-    start: 2021-01-01
-    summary: |
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - role: Backend Software Engineer
-    org: X
-    start: 2016-01-01
-    end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - role: "Tutor"
+    org: "University of Melbourne"
+    start: "2023"
+    end: "2026"
+    summary: "Teaching responsibilities included:
+
+
+      - Calculus 1
+
+      - Calculus 2
+
+      - Linear Algebra
+
+      - Physics laboratories"
+  - role: "Tutor"
+    org: "KU Leuven"
+    start: "2021"
+    end: "2022"
+    summary: "Teaching responsibilities included:
+
+
+      - Calculus 1
+
+      - Differential Equations"
+  - role: "Research Project"
+    org: "Imperial College London"
+    start: "2020"
+    end: "2020"
+    summary: "Topics included:
+
+
+      - Directed Acyclic Graphs
+
+      - Minkowski distances
+
+      - Percolation models"
+  - role: "Research Engineering Intern"
+    org: "Thales Alenia Space"
+    start: "2019"
+    end: "2019"
+    summary: "Responsibilities included:
+
+
+      - Model optical fiber components within an imaging spectrometer
+
+      - Conduct calibration and modeling of an imaging Fourier-transform spectrometer
+
+      - Study speckle phenomena and optical signal processing"
+  - role: "Engineering Project"
+    org: "Institut d'Optique Graduate School"
+    start: "2018"
+    end: "2019"
+    summary: "Responsibilities included:
+
+
+      - Design and implement an industrial vision system
+
+      - Work on programming, mechanical engineering, and electrical engineering components"
+  - role: "Research Intern"
+    org: "Observatoire des Hauts de Provence"
+    start: "2018"
+    end: "2018"
+    summary: "Topics included:
+
+
+      - Image processing
+
+      - Speckle analysis
+
+      - Infrared detectors
+
+      - Astronomical observations"
+  - role: "Sports Activities Coordinator"
+    org: "Institut d'Optique Graduate School"
+    start: "2018"
+    end: "2019"
+    summary: "Responsibilities included:
+
+
+      - Organize events
+
+      - Coordinate teams
+
+      - Plan student activities"
 skills:
-  - name: Technical Skills
+  - name: "Programming Languages"
     items:
-      - label: Python
+      - label: "Python"
+        level: 5
+      - label: "Mathematica"
+        level: 5
+      - label: "C++"
         level: 4
-      - label: RStudio
+      - label: "MATLAB"
+        level: 4
+      - label: "LaTeX"
         level: 5
-      - label: PyTorch
-        level: 2
-  - name: Hobbies
-    color: "#eeac02"
-    color_border: "#f0bf23"
+  - name: "Scientific Computing"
     items:
-      - label: Hiking
-        level: 3
-      - label: Cats
+      - label: "Numerical Simulation"
         level: 5
-      - label: Photography
+      - label: "Mathematical Modeling"
+        level: 5
+      - label: "Asymptotic Analysis"
+        level: 5
+      - label: "Scientific Computing"
+        level: 5
+      - label: "Image Processing"
+        level: 4
+  - name: "Scientific Areas"
+    items:
+      - label: "Random Matrix Theory"
+        level: 5
+      - label: "Probability"
+        level: 5
+      - label: "Complex Analysis"
+        level: 5
+      - label: "Statistical Physics"
+        level: 4
+      - label: "Optical Engineering"
+        level: 4
+      - label: "Signal Processing"
         level: 4
 languages:
-  - name: English
+  - name: "French"
     level: 5
-  - name: Chinese
-    level: 4
-  - name: Portuguese
-    level: 1
-awards:
-  - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: "2023-11-25"
-    awarder: Coursera
-    icon: brands/coursera
-    summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: "2023-07-01"
-    awarder: edX
-    icon: brands/edx
-    summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
-  - title: "Object-Oriented Programming in R"
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
-    date: "2023-01-21"
-    awarder: datacamp
-    icon: brands/datacamp
-    summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+  - name: "English"
+    level: 5
+  - name: "Spanish"
+    level: 3
+awards: []
+postnominals:
+  - "PhD"
+ids:
+  orcid: "0000-0002-5682-424X"
+  arxiv: "https://arxiv.org/search/math?searchtype=author&query=Allard,+M"
+interests:
+  - "Random Matrix Theory"
+  - "Probability"
+  - "Complex Analysis"
+  - "Mathematical Physics"
+  - "Asymptotics"
+  - "Integrable Probability"
+  - "Coulomb Gases"

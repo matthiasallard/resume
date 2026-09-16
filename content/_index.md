@@ -1,51 +1,67 @@
 ---
-title: 'Home'
-date: 2023-10-24
-type: landing
-
-# Note: `username` refers to the user's folder name in `content/authors/`
-
-# Page sections
+title: "Home"
+summary: ""
+date: "2023-10-24"
+type: "landing"
 sections:
-  - block: biography
+  - block: "resume-biography"
     content:
-      username: me
-      # Show a call-to-action button under your biography? (optional)
+      username: "me"
       button:
-        text: Download Résumé
-        url: uploads/resume.pdf
+        url: "uploads/resume.pdf"
+        text: "Download Résumé"
+    ce: "section-6-resume-biography"
     design:
-      show_status: false
-      spacing:
-        padding: ['0', '0', '6rem', '0']
+      background:
+        gradient_mesh:
+          enable: true
+          intensity: "medium"
+          animation: "float"
+          positions:
+            - "top-1/4 left-1/5"
+            - "bottom-0 right-0"
+          sizes:
+            - "w-96 h-96"
+            - "w-96 h-96"
       banner:
-        # Upload your cover image to the `assets/media/` folder and reference it here
-        filename: kalen-emsley-Bkci_8qcdvQ-unsplash.jpg
-      biography:
-        # Customize the style of your biography text
-        style: 'text-align: justify; font-size: 0.8em;'
-      # Avatar customization
+        filename: "wallpaper9.jpg"
       avatar:
-        size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: rounded # Options: circle (default), square, rounded
-  - block: experience
+        size: "large"
+      spacing:
+        padding:
+          - "0"
+          - "0"
+          - "6rem"
+          - "0"
+      biography:
+        style: "text-align: center;"
+    id: "about"
+    As: "section-02bbba37"
+  - block: "research-interests"
     content:
-      username: me
+      username: "me"
+      title: "Research Interests"
+    ce: "section-research-interests"
+    id: "research-interests"
+    As: "section-d572ed69"
+  - block: "collection"
+    content:
+      count: 5
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: true
+      title: "Articles"
+      page_type: "publications"
+    ce: "section-5-collection"
     design:
-      # Hugo date format
-      date_format: 'January 2006'
-      # Education or Experience section first?
-      is_education_first: false
-  - block: skills
+      view: "citation"
+    id: "articles"
+    As: "section-dd09ee30"
+  - block: "resume-experience"
     content:
-      title: Skills & Hobbies
-      username: me
-  - block: awards
-    content:
-      title: Awards
-      username: me
-  - block: languages
-    content:
-      title: Languages
-      username: me
+      username: "me"
+    ce: "section-7-resume-experience"
+    design:
+      is_education_first: true
+    As: "section-8b81774f"
 ---

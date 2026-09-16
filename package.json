@@ -5,8 +5,9 @@
   "packageManager": "pnpm@10.14.0",
   "description": "Resume starter template for Hugo Blox with Tailwind CSS v4",
   "scripts": {
-    "dev": "hugo server --disableFastRender",
-    "build": "hugo --minify && pnpm run pagefind",
+    "bib": "python scripts/bib2hugo.py",
+    "dev": "pnpm run bib && hugo server --disableFastRender",
+    "build": "pnpm run bib && hugo --minify && pnpm run pagefind",
     "pagefind": "pagefind --site public"
   },
   "dependencies": {

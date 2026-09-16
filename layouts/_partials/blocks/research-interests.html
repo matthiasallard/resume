@@ -1,0 +1,16 @@
+{{ $username := .block.content.username | default "me" }}
+{{ $person := site.GetPage (printf "/authors/%s" $username) }}
+
+<section class="research-interests-section">
+  {{ with .block.content.title }}
+    <h2>{{ . | markdownify }}</h2>
+  {{ end }}
+
+  {{ with $person.Params.interests }}
+    <div class="research-interests-list">
+      {{ range . }}
+        <span>{{ . }}</span>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>

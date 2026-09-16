@@ -1,0 +1,227 @@
+{{ $item := .item }}
+{{ $index := .index | default 0 }}
+{{ $total := .config.len | default 0 }}
+{{ $number := sub $total $index }}
+
+{{ $year_value := $item.Params.event_start | default $item.Date }}
+{{ $year := (time $year_value).Format "2006" }}
+{{ $pub := partial "functions/resolve_publication.html" $item }}
+{{ $top_award := "" }}
+{{ with $item.Params.awards }}{{ $top_award = index . 0 }}{{ end }}
+
+<div class="pub-list-item view-citation" data-publication-number="{{ $number }}">
+
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  {{/* =====================================================
+       PUBLICATION TITLE
+       ===================================================== */}}
+
+    <div class="pub-title">
+    <strong>{{ $item.Title }}</strong>
+    </div>
+
+
+  {{/* =====================================================
+       AUTHORS
+       ===================================================== */}}
+
+  <div class="pub-authors">
+    {{- $authors := $item.Params.authors -}}
+    {{- $author_count := len $authors -}}
+
+    {{- if eq $author_count 1 -}}
+      {{ index $authors 0 }}.
+    {{- else if eq $author_count 2 -}}
+      {{ delimit $authors " and " }}.
+    {{- else -}}
+      {{ delimit $authors ", " ", and " }}.
+    {{- end -}}
+  </div>
+
+  {{/* =====================================================
+       JOURNAL / PUBLICATION INFORMATION
+       ===================================================== */}}
+
+  <div class="pub-publication">
+
+    {{ with $pub.name }}
+      {{ . | markdownify }}
+    {{ end }}
+
+    {{ with $pub.volume }}
+      , <strong>{{ . }}</strong>
+    {{ end }}
+
+    {{ with $pub.issue }}
+      ({{ . }})
+    {{ end }}
+
+    {{ with $year }}
+      ({{ . }})
+    {{ end }}
+
+    {{ with $pub.pages }}
+      , {{ . }}
+    {{ end }}
+
+  </div>
+
+  {{/* =====================================================
+       ACTION BUTTONS
+       ===================================================== */}}
+
+  <div class="flex flex-wrap items-center gap-3 mt-1">
+
+    {{ $has_attachments := partial "functions/has_attachments" $item }}
+
+    {{ if $has_attachments }}
+      {{ partial "page_links" (dict
+        "page" $item
+        "is_list" 1
+      ) }}
+    {{ end }}
+
+    {{/* ===================================================
+         BIBTEX BUTTON
+         =================================================== */}}
+
+    {{ with $item.Params.bibtex }}
+
+      <button
+        type="button"
+        class="pub-action-button bibtex-button"
+        onclick="
+          const bib = this.parentElement.nextElementSibling;
+          const visible = !bib.classList.contains('hidden');
+
+          bib.classList.toggle('hidden');
+
+          this.querySelector('.bib-label').textContent =
+            visible ? 'Bib' : 'Hide Bib';
+        "
+        aria-expanded="false"
+      >
+        <span class="bib-label">Bib</span>
+      </button>
+
+    {{ end }}
+
+    {{/* Award */}}
+    {{ with $top_award }}
+      <span class="ml-1">
+        {{ partial "components/award_badge.html"
+          (dict
+            "award" .
+            "page" $item
+            "variant" "inline"
+          )
+        }}
+      </span>
+    {{ end }}
+
+  </div>
+
+  {{/* =====================================================
+       BIBTEX DISPLAY
+       Hidden until Bib button is clicked.
+       ===================================================== */}}
+
+  {{ with $item.Params.bibtex }}
+
+    <div class="bibtex-display hidden mt-3">
+      <pre class="bibtex-code">{{ . }}</pre>
+    </div>
+
+  {{ end }}
+
+</div>
+
+{{ if eq $number 1 }}
+
+<section class="phd-thesis-section">
+
+  <div class="flex justify-center my-6">
+    <div class="w-80 border-t border-gray-300/70 dark:border-gray-600/60"></div>
+  </div>
+
+    <!-- Thesis -->
+    <div class="pub-list-item view-citation phd-thesis-item" data-publication-number="">
+
+    <!-- Graduation cap inside the existing publication circle -->
+    <svg
+        class="pub-icon phd-thesis-cap"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 256 256"
+        aria-hidden="true"
+    >
+        <path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z">
+        </path>
+    </svg>
+
+    <div class="pub-title">
+        <strong>
+        Correlation functions between eigenvalues and singular values
+        </strong>
+    </div>
+
+
+    <div class="pub-authors">
+        M. Allard.
+    </div>
+
+    <div class="pub-publication">
+        <em>PhD thesis</em>, University of Melbourne &amp; KU Leuven (2025).
+    </div>
+
+    <!-- Action buttons -->
+    <div class="flex flex-wrap items-center gap-3 mt-2">
+
+        <!-- PDF -->
+        <a
+        href="{{ "uploads/phd-manuscript.pdf" | relURL }}"
+        target="_blank"
+        rel="noopener"
+        class="pub-action-button"
+        >
+        <i class="fas fa-file-pdf mr-1" aria-hidden="true"></i>
+        PDF
+        </a>
+
+        <!-- BibTeX -->
+        <button
+        type="button"
+        class="pub-action-button bibtex-button"
+        onclick="
+            const bib = this.parentElement.nextElementSibling;
+            const visible = !bib.classList.contains('hidden');
+
+            bib.classList.toggle('hidden');
+
+            this.querySelector('.bib-label').textContent =
+            visible ? 'Bib' : 'Hide Bib';
+        "
+        aria-expanded="false"
+        >
+        <span class="bib-label">Bib</span>
+        </button>
+
+    </div>
+
+    <!-- BibTeX display -->
+    <div class="bibtex-display hidden mt-3">
+        <pre class="bibtex-code">@phdthesis{Allard2025PhD,
+    author = {Allard, Matthias},
+    title = {Correlation functions between eigenvalues and singular values},
+    school = {University of {M}elbourne \&amp; {L}euven},
+    year = {2025},
+    }</pre>
+    </div>
+
+    </div>
+
+</section>
+
+{{ end }}
+

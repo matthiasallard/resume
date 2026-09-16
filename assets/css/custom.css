@@ -1,0 +1,296 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.two-column-list ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2rem;
+  row-gap: 0.25rem;
+}
+
+.two-column-list li {
+  margin: 0;
+}
+
+/* ============================================================
+   Numbered publication list
+   Newest = highest number
+   Oldest = 1
+   ============================================================ */
+
+.pub-list-item.view-citation {
+  position: relative;
+  padding-left: 2.8rem;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.55;
+}
+
+
+/* ============================================================
+   Numbered filled circle — PRIMARY color
+   ============================================================ */
+
+.pub-list-item.view-citation::before {
+  content: attr(data-publication-number);
+
+  position: absolute;
+  left: 0;
+  top: 0.12rem;
+
+  width: 1.55rem;
+  height: 1.55rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: var(--color-primary-600);
+  color: white;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* Dark mode */
+.pub-list-item.view-citation::before {
+  background-color: var(--color-primary-600);
+  color: white;
+}
+
+.dark .pub-list-item.view-citation::before {
+  background-color: var(--color-primary-400);
+  color: var(--color-primary-950);
+}
+
+
+/* ============================================================
+   ALL PUBLICATION BUTTONS
+   Bib / DOI / arXiv / PDF / URL
+   ============================================================ */
+
+.pub-list-item.view-citation .hb-attachment-link,
+.pub-list-item.view-citation .pub-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  height: 1.75rem;
+  min-height: 1.75rem;
+
+  padding: 0 0.65rem;
+
+  border: 1px solid var(--color-secondary-600);
+  border-radius: 0.25rem;
+
+  background-color: transparent;
+  color: var(--color-secondary-600);
+
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+
+  /* Match Bib button capitalization */
+  text-transform: none;
+
+  letter-spacing: 0.025em;
+
+  text-decoration: none;
+
+  vertical-align: middle;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.pub-list-item.view-citation .hb-attachment-link:hover,
+.pub-list-item.view-citation .pub-action-button:hover {
+  color: white;
+  background-color: var(--color-secondary-600);
+  border-color: var(--color-secondary-600);
+
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+
+.dark .pub-list-item.view-citation .hb-attachment-link,
+.dark .pub-list-item.view-citation .pub-action-button {
+  background-color: transparent;
+  color: var(--color-secondary-400);
+  border-color: var(--color-secondary-400);
+}
+
+
+.dark .pub-list-item.view-citation .hb-attachment-link:hover,
+.dark .pub-list-item.view-citation .pub-action-button:hover {
+  color: var(--color-secondary-950);
+  background-color: var(--color-secondary-400);
+  border-color: var(--color-secondary-400);
+}
+
+
+/* ============================================================
+   REMOVE ICONS
+   ============================================================ */
+
+.pub-list-item.view-citation .hb-attachment-link svg,
+.pub-list-item.view-citation .hb-attachment-link i,
+.pub-list-item.view-citation .pub-action-button svg,
+.pub-list-item.view-citation .pub-action-button i {
+  display: none;
+}
+
+
+/* ============================================================
+   BIBTEX — COPIED STATE
+   ============================================================ */
+
+.pub-list-item.view-citation .bibtex-button.copied {
+  background-color: var(--color-secondary-100);
+  border-color: var(--color-secondary-400);
+  color: var(--color-secondary-700);
+}
+
+
+.dark .pub-list-item.view-citation .bibtex-button.copied {
+  background-color: var(--color-secondary-900);
+  border-color: var(--color-secondary-400);
+  color: var(--color-secondary-300);
+}
+
+
+/* ============================================================
+   BUTTON ROW
+   ============================================================ */
+
+.pub-list-item.view-citation .flex.flex-wrap {
+  align-items: center;
+  gap: 0.75rem;
+}
+
+
+/* Remove inherited spacing differences */
+.pub-list-item.view-citation .flex.flex-wrap > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   Expanded BibTeX citation
+   ============================================================ */
+
+.pub-list-item.view-citation .bibtex-display {
+  margin-top: 0.5rem !important;
+}
+
+.pub-list-item.view-citation .bibtex-code {
+  margin: 0;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+
+  font-size: 0.65rem !important;
+  line-height: 1.35 !important;
+
+  padding: 0.6rem 0.75rem;
+
+  border-radius: 0.25rem;
+
+  white-space: pre-wrap;
+  overflow-x: auto;
+
+  /* Light secondary-color background */
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+}
+
+
+/* ============================================================
+   Dark mode
+   ============================================================ */
+
+.dark .pub-list-item.view-citation .bibtex-code {
+  background-color: var(--color-secondary-800);
+  color: var(--color-secondary-100);
+}
+
+
+.research-interests-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.research-interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.research-interest-item {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 9999px;
+  background-color: rgba(100, 100, 100, 0.08);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+
+
+/* ============================================================
+   PhD thesis graduation cap
+   ============================================================ */
+
+.phd-thesis-item .phd-thesis-cap {
+  position: absolute !important;
+
+  left: 0.325rem !important;
+  top: 0.4rem !important;
+
+  width: 0.9rem !important;
+  height: 0.9rem !important;
+
+  color: white !important;
+  fill: currentColor !important;
+
+  z-index: 10 !important;
+  pointer-events: none !important;
+}
+
+
+/* Dark mode */
+.dark .phd-thesis-item .phd-thesis-cap {
+  color: var(--color-primary-950) !important;
+}
+
+
+
+
+
