@@ -1,6 +1,6 @@
 ---
-title: "Home"
-summary: ""
+title: "Matthias Allard"
+summary: "Matthias Allard is a mathematical physicist specializing in Random Matrix Theory, probability, asymptotics, and Coulomb gases."
 date: "2023-10-24"
 type: "landing"
 sections:
