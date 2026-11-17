@@ -1042,7 +1042,7 @@ def make_citation_html(entry):
 # Hugo front matter
 # ============================================================
 
-def make_front_matter(entry):
+def make_front_matter(entry, index):
 
     entry_type = str(
         entry.entry_type
@@ -1331,6 +1331,7 @@ def make_front_matter(entry):
         f'publishDate: "{year}-01-01"'
     )
 
+    lines.append(f"weight: {-index}")
     # --------------------------------------------------------
     # Publication type
     # --------------------------------------------------------
@@ -1854,7 +1855,7 @@ def main():
 
     seen_keys = set()
 
-    for entry in entries:
+    for index, entry in enumerate(entries):
 
         if not entry.key:
             continue
@@ -1906,9 +1907,7 @@ def main():
         # Generate front matter
         # ----------------------------------------------------
 
-        content = make_front_matter(
-            entry
-        )
+        content = make_front_matter(entry, index)
 
         output_file = (
             publication_dir / "index.md"

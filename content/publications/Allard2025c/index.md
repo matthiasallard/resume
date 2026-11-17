@@ -1,10 +1,11 @@
 ---
-title: "Birth of a gap: Critical phenomena in 2D Coulomb gas"
+title: "Critical phenomena in 2D Coulomb gas: Birth of a gap"
 bibtex_key: "Allard2025c"
 bibtex: |
   @Article{Allard2025c,
     author        = {Matthias Allard and Sampad Lahiry},
-    title         = {{Birth of a gap: Critical phenomena in 2D Coulomb gas}},
+    journal       = {To appear in Communications in Mathematical Physics},
+    title         = {{Critical phenomena in 2D {C}oulomb gas: Birth of a gap}},
     year          = {2025},
     archiveprefix = {arXiv},
     eprint        = {2509.24529},
@@ -16,11 +17,12 @@ authors:
   - "S. Lahiry"
 date: "2025-01-01"
 publishDate: "2025-01-01"
+weight: -3
 publication_types:
   - article-journal
 
 publication:
-  name: ""
+  name: "To appear in Communications in Mathematical Physics"
   short_name: ""
   volume: ""
   issue: ""
@@ -28,9 +30,9 @@ publication:
   publisher: ""
 
 abstract: ""
-summary: "Birth of a gap: Critical phenomena in 2D Coulomb gas"
+summary: "Critical phenomena in 2D Coulomb gas: Birth of a gap"
 
-citation: "M. Allard and S. Lahiry. <em>Birth of a gap: Critical phenomena in 2D Coulomb gas</em>. <a href=\"https://arxiv.org/abs/2509.24529\" target=\"_blank\" rel=\"noopener\">arXiv:2509.24529 (2025)</a>."
+citation: "M. Allard and S. Lahiry. <em>Critical phenomena in 2D Coulomb gas: Birth of a gap</em>. To appear in Communications in Mathematical Physics (2025). <a href=\"https://arxiv.org/abs/2509.24529\" target=\"_blank\" rel=\"noopener\">arXiv:2509.24529</a>."
 
 tags:
   - Research

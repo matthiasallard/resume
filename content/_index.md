@@ -48,7 +48,7 @@ sections:
     content:
       count: 5
       offset: 0
-      sort_by: "Date"
+      sort_by: "Weight"
       sort_ascending: true
       title: "Articles"
       page_type: "publications"

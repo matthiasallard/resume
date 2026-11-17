@@ -24,6 +24,7 @@ authors:
   - "M. Kieburg"
 date: "2025-01-01"
 publishDate: "2025-01-01"
+weight: 0
 publication_types:
   - article-journal
 
